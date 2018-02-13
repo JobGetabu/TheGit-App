@@ -7,10 +7,10 @@ New null-safe replacement of Java for android development
   
 ![image](https://user-images.githubusercontent.com/22516895/36172120-f0e13498-1115-11e8-9d4a-69d8ff74d972.png)
 
-### 2. Build Variants <h2/><b/>
+### 2. Build Variants 
 Different flavors and builds of the same app sharing the same code base.
   
-<b><h2>3. ConstraintLayout<h2/><b/>
+### 3. ConstraintLayout
 Use of the new performance efficient layout recommended for use by Google
 offers better layering design and performance.
 
