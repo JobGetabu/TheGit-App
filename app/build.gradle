@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+// at the top of file
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -13,6 +16,40 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        flavorDimensions "default"
+
+        productFlavors {
+
+            finalProduction {
+                dimension "default"
+                applicationId "com.job.gitapp"
+                resValue "string", "app_name", "Git App"
+            }
+
+            demoProduction {
+                dimension "default"
+                applicationId "com.job.gitapp.demoproduction"
+                resValue "string", "app_name", "Git App Demo P"
+            }
+
+            demoTesting {
+                dimension "default"
+                applicationId "com.job.gitapp.demotesting"
+                resValue "string", "app_name", "Git App Demo T"
+            }
+
+
+            mock {
+                dimension "default"
+                applicationId "com.job.gitapp.mock"
+                resValue "string", "app_name", "Git App Mock"
+            }
+        }
+
+        dataBinding.enabled = true
+
     }
     buildTypes {
         release {
@@ -30,4 +67,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    // kapt "com.android.databinding:compiler:3.0.0-beta1"
+    kapt "com.android.databinding:compiler:3.0.1"
 }
