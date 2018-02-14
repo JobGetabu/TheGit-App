@@ -4,6 +4,7 @@ This sample app demonstrates use of the latest technologies as of start of 2018
 
 ### 1. Kotlin language
 New null-safe language, a replacement of Java for android development
+Using kotlin_version = '1.2.21'
   
 ![image](https://user-images.githubusercontent.com/22516895/36172120-f0e13498-1115-11e8-9d4a-69d8ff74d972.png)
 
